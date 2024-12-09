@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-gantt/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
+
+[data-status="completed"] .e-gantt-child-taskbar-inner-div,
+[data-status="completed"] .e-gantt-child-progressbar-inner-div {
+  background-color: #6E6EDB !important;
+  outline: 1px solid #6E6EDB !important;
+  border: 1px solid #6E6EDB !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-status="delayed-completed"] .e-gantt-child-taskbar-inner-div,
+[data-status="delayed-completed"] .e-gantt-child-progressbar-inner-div {
+  background-color: #EEB209 !important;
+  outline: 1px solid #EEB209 !important;
+  border: 1px solid #EEB209 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[data-status="delayed-inProgress"] .e-gantt-child-taskbar-inner-div,
+[data-status="delayed-inProgress"] .e-gantt-child-progressbar-inner-div {
+  /* background-color: #ec8f8c !important;
+  outline: 1px solid #ec8f8c !important;
+  border: 1px solid #ec8f8c !important; */
+  background-color: #F58220 !important;
+  outline: 1px solid #F58220 !important;
+  border: 1px solid #F58220 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+[data-status="inProgress"] .e-gantt-child-taskbar-inner-div,
+[data-status="inProgress"] .e-gantt-child-progressbar-inner-div {
+  background-color: #4AA147 !important;
+  outline: 1px solid #4AA147 !important;
+  border: 1px solid #4AA147 !important;
 }
 
-.App-link {
-  color: #61dafb;
+[data-status="notStarted"] .e-gantt-child-taskbar-inner-div,
+[data-status="notStarted"] .e-gantt-child-progressbar-inner-div {
+  background-color: #dde3ea !important;
+  outline: 1px solid #dde3ea !important;
+  border: 1px solid #dde3ea !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+[data-status="Rejected"] .e-gantt-child-taskbar-inner-div,
+[data-status="Rejected"] .e-gantt-child-progressbar-inner-div {
+  background-color: #FF6060 !important;
+  outline: 1px solid #FF6060 !important;
+  border: 1px solid #FF6060 !important;
 }
+

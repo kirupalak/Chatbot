@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 20px !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,82 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.overallProgress-legend {
+  width: 14px;
+  height: 4px;
+  background-color: #616161 !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.inProgress-legend {
+  width: 14px;
+  height: 4px;
+  background-color: #4AA147 !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.delayed-inProgress-legend {
+  width: 14px;
+  height: 4px;
+  /* background-color: #ec8f8c !important; */
+  background-color: #F58220 !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.completed-legend {
+  width: 14px;
+  height: 4px;
+  background-color: #6E6EDB !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.delayed-completed-legend {
+  width: 14px;
+  height: 4px;
+  background-color: #EEB209 !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.rejected-legend {
+  width: 14px;
+  height: 4px;
+  background-color: #FF6060 !important;
+  border-radius: 10%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 12px;
+}
+
+.clsModeRow{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
+  align-items: center;
+  padding: 10px 20px 0px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.clsHomeRowRight{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

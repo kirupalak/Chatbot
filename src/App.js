@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useEffect, useState } from "react";
+import KFSDK from "@kissflow/lowcode-client-sdk";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import { Fragment } from "react";
+import  Timeline  from "./timeline.js";
+
+import "./App.css";
+
+
+ function App() {
+  const [kf, setKf] = useState();
+
+  useEffect(() => {
+    setTimeout(() => {
+      loadKfSdk();
+    }, 300);
+  }, []);
+
+  async function loadKfSdk() {
+    let kf = await KFSDK.initialize();
+    window.kf = kf;
+    setKf(kf);
+    
+  }
+
+  return <Fragment>{ kf&& <Timeline />}</Fragment>;
+  // return <Fragment>{<Timeline />}</Fragment>;
+
 }
-
 export default App;
